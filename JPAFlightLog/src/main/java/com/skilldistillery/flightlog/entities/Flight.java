@@ -21,22 +21,21 @@ public class Flight {
 	private double durationInHours;
 	private String location;
 	@Column(name="aircraft_tail_number")
-	private double aircraftTailNumber;
+	private Integer aircraftTailNumber;
 	@Column(name="pilot_in_command_name")
-	private double pilotInCommandName;
+	private String pilotInCommandName;
 	@Column(name="pilot_name")
-	private double pilotName;
+	private String pilotName;
 	@Column(name="crew_cheif_name")
-	private double crewCheifName;
+	private String crewCheifName;
 	@Column(name="medic_name")
-	private double medicName;
+	private String medicName;
 	@Column(name="mission_enviroment")
-	private double missionEnviroment;
+	private String missionEnviroment;
 	@Column(name="mission_type")
-	private double missionsType;
+	private String missionsType;
 	@Column(name="special_equipment")
-	private double specialEquipment;
-	
+	private String specialEquipment;
 	
 	
 	public int getId() {
@@ -69,52 +68,54 @@ public class Flight {
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	public double getAircraftTailNumber() {
+
+	public Integer getAircraftTailNumber() {
 		return aircraftTailNumber;
 	}
-	public void setAircraftTailNumber(double aircraftTailNumber) {
+	public void setAircraftTailNumber(Integer aircraftTailNumber) {
 		this.aircraftTailNumber = aircraftTailNumber;
 	}
-	public double getPilotInCommandName() {
+
+	public String getPilotInCommandName() {
 		return pilotInCommandName;
 	}
-	public void setPilotInCommandName(double pilotInCommandName) {
+	public void setPilotInCommandName(String pilotInCommandName) {
 		this.pilotInCommandName = pilotInCommandName;
 	}
-	public double getPilotName() {
+	public String getPilotName() {
 		return pilotName;
 	}
-	public void setPilotName(double pilotName) {
+	public void setPilotName(String pilotName) {
 		this.pilotName = pilotName;
 	}
-	public double getCrewCheifName() {
+	public String getCrewCheifName() {
 		return crewCheifName;
 	}
-	public void setCrewCheifName(double crewCheifName) {
+	public void setCrewCheifName(String crewCheifName) {
 		this.crewCheifName = crewCheifName;
 	}
-	public double getMedicName() {
+	public String getMedicName() {
 		return medicName;
 	}
-	public void setMedicName(double medicName) {
+	public void setMedicName(String medicName) {
 		this.medicName = medicName;
 	}
-	public double getMissionEnviroment() {
+	public String getMissionEnviroment() {
 		return missionEnviroment;
 	}
-	public void setMissionEnviroment(double missionEnviroment) {
+	public void setMissionEnviroment(String missionEnviroment) {
 		this.missionEnviroment = missionEnviroment;
 	}
-	public double getMissionsType() {
+	public String getMissionsType() {
 		return missionsType;
 	}
-	public void setMissionsType(double missionsType) {
+	public void setMissionsType(String missionsType) {
 		this.missionsType = missionsType;
 	}
-	public double getSpecialEquipment() {
+	public String getSpecialEquipment() {
 		return specialEquipment;
 	}
-	public void setSpecialEquipment(double specialEquipment) {
+	public void setSpecialEquipment(String specialEquipment) {
 		this.specialEquipment = specialEquipment;
 	}
 	@Override
@@ -125,6 +126,10 @@ public class Flight {
 				+ crewCheifName + ", medicName=" + medicName + ", missionEnviroment=" + missionEnviroment
 				+ ", missionsType=" + missionsType + ", specialEquipment=" + specialEquipment + "]";
 	}
+	
+	
+	
+	
 	
 	
 	
