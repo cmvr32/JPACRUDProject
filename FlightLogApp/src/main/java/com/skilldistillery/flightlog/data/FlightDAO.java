@@ -12,7 +12,7 @@ public interface FlightDAO {
 	
 	Flight addFlight(Flight flight);
 	
-	boolean removeFlight (Flight flight, int id);
+	boolean removeFlight (int id);
 	
 	Flight updateFlight (Flight flight, int id);
 

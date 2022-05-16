@@ -34,7 +34,7 @@ public class FlightDaoJpaImpl implements FlightDAO {
 		return flight;
 	}
 
-	public boolean removeFlight(Flight flight, int id) {
+	public boolean removeFlight(int id) {
 
 		boolean removed = false;
 		Flight flightToRemove = em.find(Flight.class, id);

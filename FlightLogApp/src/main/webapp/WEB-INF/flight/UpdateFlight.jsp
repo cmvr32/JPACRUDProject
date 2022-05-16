@@ -9,6 +9,8 @@
 </head>
 <body>
 
+${flight}
+
 	<h1>Update Flight #${flight.id}</h1> 
 <form action="addFlight.do">
 	<label for="date">Date ${flight.date}</label><br>

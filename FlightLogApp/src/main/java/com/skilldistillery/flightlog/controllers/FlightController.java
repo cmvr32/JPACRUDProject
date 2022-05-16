@@ -1,12 +1,11 @@
 package com.skilldistillery.flightlog.controllers;
 
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.skilldistillery.flightlog.data.FlightDAO;
@@ -41,17 +40,17 @@ public class FlightController {
 		return "flight/UpdateFlight";
 	}
 	
-//	@RequestMapping("directToIndex.do")
-//	public String directToIndex() {
-//		return "index.do";
-//	}
 	
 	@RequestMapping("directToDeleteFlight.do")
-	public String directToDeleteFlight() {
+	public String directToDeleteFlight(@RequestParam int fid, Model model) {
+		dao.removeFlight(fid);
+		model.addAttribute("id", fid);
 		return "flight/DeleteFlight";
 	}
 	
-	@RequestMapping("addFlight.do") 
+
+	
+	@PostMapping("addFlight.do") 
 		public String addFlight(@RequestParam String date, 
 								@RequestParam String takeOffTime, 
 								@RequestParam double durationInHours, 
@@ -80,7 +79,7 @@ public class FlightController {
 			flight.setSpecialEquipment(specialEquipment);
 			flight = dao.addFlight(flight);
 			model.addAttribute("flight", flight);
-			return "index";
+			return "flight/ViewFlightInfo";
 		}
 	}
 	

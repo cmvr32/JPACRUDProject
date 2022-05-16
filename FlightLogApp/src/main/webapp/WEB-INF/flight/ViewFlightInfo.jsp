@@ -15,6 +15,7 @@
 </form>
 <br>
 <form action="directToDeleteFlight.do" >
+	<input type="hidden" name="fid" value="${flight.id}"/>
 	<button> Delete Flight </button>
 </form> 
 <br>
