@@ -41,10 +41,10 @@ public class FlightController {
 		return "flight/UpdateFlight";
 	}
 	
-	@RequestMapping("directToIndex.do")
-	public String directToIndex() {
-		return "index";
-	}
+//	@RequestMapping("directToIndex.do")
+//	public String directToIndex() {
+//		return "index.do";
+//	}
 	
 	@RequestMapping("directToDeleteFlight.do")
 	public String directToDeleteFlight() {
@@ -80,7 +80,7 @@ public class FlightController {
 			flight.setSpecialEquipment(specialEquipment);
 			flight = dao.addFlight(flight);
 			model.addAttribute("flight", flight);
-			return "flight/viewFlightInfo";
+			return "index";
 		}
 	}
 	

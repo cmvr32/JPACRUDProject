@@ -16,7 +16,11 @@
 <br>
 <form action="directToDeleteFlight.do" >
 	<button> Delete Flight </button>
-</form> <br><br>
+</form> 
+<br>
+<form action="index.do" >
+	<button> Return To Home Page </button>
+</form><br>
 
 <div>
  <%--  <h3>Date: </h3> ${flight.date}

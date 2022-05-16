@@ -10,7 +10,7 @@
 
 <h1>Flight #${flight.id} Deleted</h1>
 
-<form action="directToIndex.do" >
+<form action="index.do" >
 	<button> Return To Home Page </button>
 </form>
 
