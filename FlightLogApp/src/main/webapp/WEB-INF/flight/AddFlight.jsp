@@ -11,7 +11,7 @@
 	<h1>Log A New Flight</h1>
 <form action="addFlight.do" method="post">
 	<label for="date">Date</label><br>
-	<input type="text" name="date"></input> 
+	<input type="text" name="date" placeholder="Date"></input> 
 	<br><br>
 	<label for="takeOffTime">Takeoff Time</label><br>
 	<input type="text" name="takeOffTime"></input>

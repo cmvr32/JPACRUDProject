@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.skilldistillery.flightlog.data.FlightDAO;
@@ -36,15 +35,16 @@ public class FlightController {
 	}
 	
 	@RequestMapping("directToUpdateFlight.do")
-	public String directToUpdateFlight() {
+	public String directToUpdateFlight(int id, Model model ) {
+		model.addAttribute("flight", dao.findById(id));
 		return "flight/UpdateFlight";
 	}
 	
 	
 	@RequestMapping("directToDeleteFlight.do")
-	public String directToDeleteFlight(@RequestParam int fid, Model model) {
-		dao.removeFlight(fid);
-		model.addAttribute("id", fid);
+	public String directToDeleteFlight(@RequestParam int id, Model model) {
+		dao.removeFlight(id);
+		model.addAttribute("id", id);
 		return "flight/DeleteFlight";
 	}
 	
@@ -75,12 +75,21 @@ public class FlightController {
 			flight.setCrewCheifName(crewCheifName);
 			flight.setMedicName(medicName);
 			flight.setMissionEnviroment(missionEnviroment);
-			flight.setMissionsType(missionType);
+			flight.setMissionType(missionType);
 			flight.setSpecialEquipment(specialEquipment);
 			flight = dao.addFlight(flight);
 			model.addAttribute("flight", flight);
 			return "flight/ViewFlightInfo";
 		}
+	
+	@PostMapping ("updateFlight.do")
+	public String updateFlight(Flight flight, Model model) {
+		dao.updateFlight(flight);
+		model.addAttribute("flight", flight);
+		
+		return "flight/ViewFlightInfo";
+		
+	}
 	}
 	
 

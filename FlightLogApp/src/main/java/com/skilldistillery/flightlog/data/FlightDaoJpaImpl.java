@@ -46,9 +46,9 @@ public class FlightDaoJpaImpl implements FlightDAO {
 
 	}
 
-	public Flight updateFlight(Flight flight, int id) {
+	public Flight updateFlight(Flight flight) {
 
-		Flight flightToUpdate = em.find(Flight.class, id);
+		Flight flightToUpdate = em.find(Flight.class, flight.getId());
 		if (flightToUpdate != null) {
 			flightToUpdate.setDate(flight.getDate());
 			flightToUpdate.setTakeOffTime(flight.getTakeOffTime());
@@ -60,7 +60,7 @@ public class FlightDaoJpaImpl implements FlightDAO {
 			flightToUpdate.setCrewCheifName(flight.getCrewCheifName());
 			flightToUpdate.setMedicName(flight.getMedicName());
 			flightToUpdate.setMissionEnviroment(flight.getMissionEnviroment());
-			flightToUpdate.setMissionsType(flight.getMissionsType());
+			flightToUpdate.setMissionType(flight.getMissionType());
 			flightToUpdate.setSpecialEquipment(flight.getSpecialEquipment());
 
 		}

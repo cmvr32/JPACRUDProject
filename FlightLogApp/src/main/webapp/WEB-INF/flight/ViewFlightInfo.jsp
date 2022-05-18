@@ -11,11 +11,12 @@
 <h1>Flight #${flight.id}</h1>
 
 <form action="directToUpdateFlight.do" >
+	<input type="hidden" name="id" value="${flight.id}"/>
 	<button> Edit Flight </button>
 </form>
 <br>
 <form action="directToDeleteFlight.do" >
-	<input type="hidden" name="fid" value="${flight.id}"/>
+	<input type="hidden" name="id" value="${flight.id}"/>
 	<button> Delete Flight </button>
 </form> 
 <br>

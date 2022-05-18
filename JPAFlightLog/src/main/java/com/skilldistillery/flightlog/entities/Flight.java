@@ -33,7 +33,7 @@ public class Flight {
 	@Column(name="mission_enviroment")
 	private String missionEnviroment;
 	@Column(name="mission_type")
-	private String missionsType;
+	private String missionType;
 	@Column(name="special_equipment")
 	private String specialEquipment;
 	
@@ -106,11 +106,11 @@ public class Flight {
 	public void setMissionEnviroment(String missionEnviroment) {
 		this.missionEnviroment = missionEnviroment;
 	}
-	public String getMissionsType() {
-		return missionsType;
+	public String getMissionType() {
+		return missionType;
 	}
-	public void setMissionsType(String missionsType) {
-		this.missionsType = missionsType;
+	public void setMissionType(String missionsType) {
+		this.missionType = missionsType;
 	}
 	public String getSpecialEquipment() {
 		return specialEquipment;
@@ -124,7 +124,7 @@ public class Flight {
 				+ durationInHours + ", location=" + location + ", aircraftTailNumber=" + aircraftTailNumber
 				+ ", pilotInCommandName=" + pilotInCommandName + ", pilotName=" + pilotName + ", crewCheifName="
 				+ crewCheifName + ", medicName=" + medicName + ", missionEnviroment=" + missionEnviroment
-				+ ", missionsType=" + missionsType + ", specialEquipment=" + specialEquipment + "]";
+				+ ", missionsType=" + missionType + ", specialEquipment=" + specialEquipment + "]";
 	}
 	
 	
